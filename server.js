@@ -6,6 +6,7 @@ import connectDB from "./config/db.js";
 import cors from "cors";
 import compression from "compression";
 import authRoutes from './routes/authRoutes.js'
+import paymentRoutes  from './routes/paymentRoutes.js'
 import session from "express-session";
 
 import colors from "colors";
@@ -44,6 +45,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/v1/users', authRoutes)
+app.use('/api/v1/payments', paymentRoutes)
+
 
 
 app.use(notFound);

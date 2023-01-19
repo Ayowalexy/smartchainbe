@@ -16,6 +16,10 @@ const userSchema = new Schema({
     canResetPassword: {
         type: Boolean,
         default: false
+    },
+    walletBalance: {
+        type: Number,
+        default: 0
     }
 })
 
